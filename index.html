@@ -30,15 +30,9 @@
             --text: #111;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html {
-            font-size: 100%;
-        }
+        html { font-size: 100%; }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -74,16 +68,16 @@
         h1 {
             color: var(--primary);
             text-align: center;
-            font-size: 2.4rem;              /* Voltou para tamanho legal, não tão gigante */
+            font-size: 2.4rem;
             margin-bottom: 40px;
             line-height: 1.2;
             font-weight: 800;
         }
 
-        /* Parágrafos do meio - mantidos grandes e fortes */
+        /* Apenas essa parte aumentada mais um pouco */
         .main-text p {
-            margin-bottom: 2.2rem;
-            font-size: 1.45rem;             /* Continua grande (~32-35px no celular) */
+            margin-bottom: 2.3rem;
+            font-size: 1.55rem;             /* Aumentado só aqui – bem visível agora */
             font-weight: bold;
             line-height: 1.75;
         }
@@ -128,33 +122,58 @@
             font-weight: 900;
         }
 
-        /* Ajustes finos para telas pequenas */
+        /* Botão flutuante WhatsApp com símbolo original */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background: #128c7e;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float img {
+            width: 70px;
+            height: 70px;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 213, 102, 0.7); }
+            70% { box-shadow: 0 0 0 25px rgba(37, 213, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 213, 102, 0); }
+        }
+
         @media (max-width: 380px) {
             body { font-size: 22px; }
             h1 { font-size: 2.2rem; }
-            .main-text p { font-size: 1.4rem; }
+            .main-text p { font-size: 1.5rem; }
             .logo img { max-width: 250px; }
-            .cta a { padding: 24px 55px; min-width: 340px; font-size: 1.65rem; }
+            .whatsapp-float { width: 70px; height: 70px; bottom: 20px; right: 20px; }
+            .whatsapp-float img { width: 60px; height: 60px; }
         }
 
         @media (min-width: 480px) {
-            body { font-size: 25px; }
-            h1 { font-size: 2.6rem; }
-            .main-text p { font-size: 1.5rem; }
-            .container { padding: 45px 35px; width: 94%; }
-            .cta a { padding: 28px 70px; min-width: 400px; }
-        }
-
-        @media (min-width: 768px) {
-            .container { max-width: 820px; padding: 70px 60px; }
-            h1 { font-size: 3rem; }
-            .logo img { max-width: 360px; }
+            .main-text p { font-size: 1.6rem; }
+            .whatsapp-float { width: 85px; height: 85px; }
+            .whatsapp-float img { width: 75px; height: 75px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- LOGO DA EMPRESA -->
         <div class="logo">
             <a href="https://solucoesclimatizacao.com.br">
                 <img src="logo.png" alt="Soluções Climatização">
@@ -163,7 +182,6 @@
 
         <h1>Instalação de Ar-Condicionado em Cuiabá e Várzea Grande | Técnico Especializado</h1>
 
-        <!-- Parágrafos do meio grandes e fortes -->
         <div class="main-text">
             <p>Precisa de instalação de ar-condicionado em Cuiabá e Várzea Grande feita por profissional qualificado?</p>
 
@@ -183,5 +201,13 @@
             <a href="https://solucoesclimatizacao.com.br">https://solucoesclimatizacao.com.br</a>
         </footer>
     </div>
+
+    <!-- Botão flutuante com símbolo original do WhatsApp -->
+    <a class="whatsapp-float"
+       href="https://wa.me/5565993591390?text=Olá!%20Preciso%20de%20instalação%20de%20ar-condicionado%20em%20Cuiabá%20ou%20Várzea%20Grande"
+       target="_blank"
+       aria-label="Fale conosco no WhatsApp">
+        <img src="https://www.freeiconspng.com/uploads/logo-whatsapp-png-photo-4.png" alt="WhatsApp">
+    </a>
 </body>
 </html>
