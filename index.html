@@ -24,130 +24,162 @@
     </script>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary: #25D366;
+            --dark-green: #128c7e;
+            --text: #333;
+            --light-bg: #f9fff9;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #e8f5e9 0%, #ffffff 50%);
-            color: #333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e8f5e9 0%, #ffffff 60%);
+            color: var(--text);
             line-height: 1.6;
+            font-size: 1.1rem; /* Maior no mobile para legibilidade */
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 100%;
+            width: 90%;
             margin: 0 auto;
-            padding: 24px 16px;
+            padding: 20px 15px;
             background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
         .logo {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 20px 0 30px;
         }
 
         .logo img {
-            max-width: 150px;
+            max-width: 180px;
             height: auto;
+            width: 100%;
         }
 
         h1 {
-            color: #25D366;
+            color: var(--primary);
             text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
         }
 
         p {
-            font-size: 1.05em;
-            margin-bottom: 16px;
-            text-align: left;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
         }
 
         .cta {
-            margin: 30px 0;
+            text-align: center;
+            margin: 35px 0;
         }
 
         .cta a {
-            display: block;
-            background: #25D366;
+            background: var(--primary);
             color: white;
-            padding: 18px 20px;
-            border-radius: 12px;
+            padding: 16px 35px;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 1.15em;
+            font-size: 1.3rem;
             font-weight: bold;
-            text-align: center;
+            display: inline-block;
+            min-width: 280px; /* Botão largo para toque fácil */
+            box-shadow: 0 4px 12px rgba(37, 213, 102, 0.3);
+            transition: all 0.3s;
+        }
+
+        .cta a:hover, .cta a:focus {
+            background: var(--dark-green);
+            transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            font-size: 0.9em;
+            margin-top: 50px;
+            padding: 20px 0;
+            font-size: 0.95rem;
             color: #555;
             border-top: 1px solid #eee;
         }
 
         footer a {
-            color: #25D366;
+            color: var(--primary);
             text-decoration: none;
         }
 
-        /* Ajustes específicos para telas maiores */
+        /* Media Queries - Ajustes para telas maiores */
+        @media (min-width: 480px) {
+            body { font-size: 1.05rem; }
+            h1 { font-size: 2.1rem; }
+            .container { padding: 30px 25px; }
+            .logo img { max-width: 220px; }
+        }
+
         @media (min-width: 768px) {
+            body { font-size: 1.1rem; }
+            h1 { font-size: 2.4rem; }
             .container {
-                padding: 40px;
+                max-width: 750px;
+                padding: 40px 30px;
             }
+            .logo { margin: 30px 0 40px; }
+            p { font-size: 1.1rem; }
+            .cta a { font-size: 1.4rem; padding: 18px 50px; min-width: 320px; }
+        }
 
-            h1 {
-                font-size: 2.2em;
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 900px;
+                padding: 50px 40px;
             }
+            h1 { font-size: 2.6rem; }
+            .logo img { max-width: 250px; }
+        }
 
-            .logo img {
-                max-width: 180px;
-            }
-
-            .cta a {
-                display: inline-block;
-                padding: 16px 40px;
-                border-radius: 50px;
-                font-size: 1.3em;
-            }
+        /* Melhora toque e performance em mobile */
+        a, button {
+            touch-action: manipulation;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-
-        <!-- LOGO -->
+        <!-- LOGO DA EMPRESA -->
         <div class="logo">
             <a href="https://solucoesclimatizacao.com.br">
-                <img src="logo.jpeg" alt="Soluções Climatização">
+                <img src="logo.png" alt="Soluções Climatização">
             </a>
         </div>
+        <!-- FIM LOGO -->
 
-        <h1>Instalação de Ar-Condicionado em Cuiabá</h1>
+        <h1>Instalação de Ar-Condicionado em Cuiabá | Técnico Especializado</h1>
 
         <p>Precisa de instalação de ar-condicionado em Cuiabá feita por profissional qualificado?</p>
 
-        <p>Realizamos instalação de ar-condicionado split, inverter e convencional, seguindo todas as normas técnicas. Utilizamos bomba de vácuo, flanges bem executadas e verificação completa do sistema, garantindo economia de energia e preservação da garantia do equipamento.</p>
+        <p>Realizamos instalação de ar-condicionado split, inverter e convencional, seguindo todas as normas técnicas. Usamos bomba de vácuo, flanges bem executadas e verificamos o sistema completo para garantir funcionamento perfeito, economia de energia e preservação da garantia do equipamento.</p>
 
         <p>Atendemos residências e comércios em Cuiabá e região, com agendamento rápido e suporte pós-serviço.</p>
 
         <div class="cta">
             <a href="https://wa.me/5565993591390?text=Olá,%20quero%20agendar%20uma%20instalação%20de%20ar-condicionado%20em%20Cuiabá">
-                📲 Falar agora no WhatsApp
+                📲 Solicite agora sua instalação pelo WhatsApp
             </a>
         </div>
 
         <footer>
             Serviço executado por <strong>Soluções Climatização</strong><br>
-            <a href="https://solucoesclimatizacao.com.br">solucoesclimatizacao.com.br</a>
+            <a href="https://solucoesclimatizacao.com.br">https://solucoesclimatizacao.com.br</a>
         </footer>
-
     </div>
 </body>
 </html>
