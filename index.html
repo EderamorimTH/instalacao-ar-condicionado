@@ -44,77 +44,79 @@
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(to bottom, #e8f5e9 0%, #ffffff 70%);
             color: var(--text);
-            line-height: 1.7;
-            font-size: 20px;               /* Fonte base maior para mobile */
+            line-height: 1.8;               /* Mais espaço entre linhas */
+            font-size: 22px;                /* Fonte base ainda maior */
             min-height: 100vh;
             -webkit-text-size-adjust: 100%;
         }
 
         .container {
             max-width: 100%;
-            width: 94%;                    /* Mais largura útil no celular */
+            width: 95%;                     /* Quase tela cheia no celular */
             margin: 0 auto;
-            padding: 28px 18px;
+            padding: 30px 20px;
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-radius: 18px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.08);
         }
 
         .logo {
             text-align: center;
-            margin: 28px 0 40px;
+            margin: 30px 0 45px;
         }
 
         .logo img {
-            max-width: 240px;
-            width: 85%;
+            max-width: 260px;
+            width: 90%;
             height: auto;
         }
 
         h1 {
             color: var(--primary);
             text-align: center;
-            font-size: 2.3rem;             /* Título bem grande no celular */
-            margin-bottom: 35px;
+            font-size: 2.5rem;              /* Título bem grande */
+            margin-bottom: 40px;
             line-height: 1.2;
             font-weight: bold;
         }
 
-        p {
-            margin-bottom: 1.6rem;         /* Mais espaço entre parágrafos */
-            font-size: 1.2rem;             /* Texto principal maior e mais legível */
+        /* Parágrafos principais - AUMENTADO MUITO */
+        .main-text p {
+            margin-bottom: 2rem;            /* Muito espaço entre eles */
+            font-size: 1.35rem;             /* Fonte grande: ~28-30px no celular */
             font-weight: 400;
+            line-height: 1.7;
         }
 
         .cta {
             text-align: center;
-            margin: 50px 0 40px;
+            margin: 60px 0 45px;
         }
 
         .cta a {
             background: var(--primary);
             color: white;
-            padding: 22px 50px;
+            padding: 24px 55px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
             display: inline-block;
-            min-width: 320px;
-            box-shadow: 0 6px 18px rgba(37, 213, 102, 0.35);
+            min-width: 340px;
+            box-shadow: 0 8px 20px rgba(37, 213, 102, 0.4);
             transition: all 0.3s ease;
         }
 
         .cta a:hover, .cta a:active {
             background: var(--dark-green);
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
 
         footer {
             text-align: center;
-            margin-top: 70px;
-            padding: 25px 0 15px;
-            font-size: 1.05rem;
+            margin-top: 80px;
+            padding: 30px 0 20px;
+            font-size: 1.1rem;
             color: #444;
             border-top: 1px solid #eee;
         }
@@ -125,27 +127,28 @@
             font-weight: bold;
         }
 
-        /* Ajuste para telas muito pequenas */
-        @media (max-width: 360px) {
-            body { font-size: 19px; }
-            h1 { font-size: 2.1rem; }
-            p { font-size: 1.15rem; }
-            .logo img { max-width: 210px; }
-            .cta a { padding: 20px 45px; min-width: 300px; font-size: 1.45rem; }
+        /* Ajustes para telas pequenas */
+        @media (max-width: 380px) {
+            body { font-size: 20px; }
+            h1 { font-size: 2.3rem; }
+            .main-text p { font-size: 1.3rem; }
+            .logo img { max-width: 230px; }
+            .cta a { padding: 22px 50px; min-width: 320px; font-size: 1.55rem; }
         }
 
-        /* Telas maiores */
+        /* Telas médias */
         @media (min-width: 480px) {
-            body { font-size: 21px; }
-            h1 { font-size: 2.6rem; }
-            .container { padding: 35px 25px; width: 90%; }
-            .cta a { padding: 24px 60px; min-width: 360px; }
+            body { font-size: 23px; }
+            h1 { font-size: 2.8rem; }
+            .main-text p { font-size: 1.4rem; }
+            .container { padding: 40px 30px; width: 92%; }
+            .cta a { padding: 26px 65px; min-width: 380px; }
         }
 
         @media (min-width: 768px) {
-            .container { max-width: 780px; padding: 50px 40px; }
-            h1 { font-size: 3rem; }
-            .logo img { max-width: 320px; }
+            .container { max-width: 800px; padding: 60px 50px; }
+            h1 { font-size: 3.2rem; }
+            .logo img { max-width: 340px; }
         }
     </style>
 </head>
@@ -160,11 +163,14 @@
 
         <h1>Instalação de Ar-Condicionado em Cuiabá | Técnico Especializado</h1>
 
-        <p>Precisa de instalação de ar-condicionado em Cuiabá feita por profissional qualificado?</p>
+        <!-- Parágrafos aumentados -->
+        <div class="main-text">
+            <p>Precisa de instalação de ar-condicionado em Cuiabá feita por profissional qualificado?</p>
 
-        <p>Realizamos instalação de ar-condicionado split, inverter e convencional, seguindo todas as normas técnicas. Usamos bomba de vácuo, flanges bem executadas e verificamos o sistema completo para garantir funcionamento perfeito, economia de energia e preservação da garantia do equipamento.</p>
+            <p>Realizamos instalação de ar-condicionado split, inverter e convencional, seguindo todas as normas técnicas. Usamos bomba de vácuo, flanges bem executadas e verificamos o sistema completo para garantir funcionamento perfeito, economia de energia e preservação da garantia do equipamento.</p>
 
-        <p>Atendemos residências e comércios em Cuiabá e região, com agendamento rápido e suporte pós-serviço.</p>
+            <p>Atendemos residências e comércios em Cuiabá e região, com agendamento rápido e suporte pós-serviço.</p>
+        </div>
 
         <div class="cta">
             <a href="https://wa.me/5565993591390?text=Olá,%20quero%20agendar%20uma%20instalação%20de%20ar-condicionado%20em%20Cuiabá">
