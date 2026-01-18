@@ -27,7 +27,7 @@
         :root {
             --primary: #25D366;
             --dark-green: #128c7e;
-            --text: #333;
+            --text: #222;
         }
 
         * {
@@ -37,24 +37,24 @@
         }
 
         html {
-            font-size: 100%; /* Base 16px, mas vamos aumentar no mobile */
+            font-size: 100%;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(to bottom, #e8f5e9 0%, #ffffff 70%);
             color: var(--text);
-            line-height: 1.65;
-            font-size: 18px;          /* Aumentado para mobile */
+            line-height: 1.7;
+            font-size: 20px;               /* Fonte base maior para mobile */
             min-height: 100vh;
             -webkit-text-size-adjust: 100%;
         }
 
         .container {
             max-width: 100%;
-            width: 92%;
+            width: 94%;                    /* Mais largura útil no celular */
             margin: 0 auto;
-            padding: 25px 18px;       /* Mais espaço nas laterais */
+            padding: 28px 18px;
             background: white;
             border-radius: 16px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -62,43 +62,45 @@
 
         .logo {
             text-align: center;
-            margin: 25px 0 35px;
+            margin: 28px 0 40px;
         }
 
         .logo img {
-            max-width: 220px;         /* Logo maior no celular */
-            width: 80%;
+            max-width: 240px;
+            width: 85%;
             height: auto;
         }
 
         h1 {
             color: var(--primary);
             text-align: center;
-            font-size: 2.1rem;        /* Muito maior no mobile */
-            margin-bottom: 30px;
+            font-size: 2.3rem;             /* Título bem grande no celular */
+            margin-bottom: 35px;
             line-height: 1.2;
+            font-weight: bold;
         }
 
         p {
-            margin-bottom: 1.4rem;
-            font-size: 1.1rem;        /* Texto mais legível */
+            margin-bottom: 1.6rem;         /* Mais espaço entre parágrafos */
+            font-size: 1.2rem;             /* Texto principal maior e mais legível */
+            font-weight: 400;
         }
 
         .cta {
             text-align: center;
-            margin: 45px 0 35px;
+            margin: 50px 0 40px;
         }
 
         .cta a {
             background: var(--primary);
             color: white;
-            padding: 20px 45px;       /* Botão bem maior e fácil de tocar */
+            padding: 22px 50px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.45rem;       /* Texto do botão maior */
+            font-size: 1.5rem;
             font-weight: bold;
             display: inline-block;
-            min-width: 300px;         /* Largura mínima confortável */
+            min-width: 320px;
             box-shadow: 0 6px 18px rgba(37, 213, 102, 0.35);
             transition: all 0.3s ease;
         }
@@ -110,9 +112,9 @@
 
         footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 70px;
             padding: 25px 0 15px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #444;
             border-top: 1px solid #eee;
         }
@@ -123,28 +125,27 @@
             font-weight: bold;
         }
 
-        /* Ajustes finos para telas muito pequenas (ex: iPhone SE, Galaxy antigos) */
+        /* Ajuste para telas muito pequenas */
         @media (max-width: 360px) {
-            body { font-size: 17px; }
-            h1 { font-size: 1.9rem; }
-            .logo img { max-width: 200px; width: 85%; }
-            .cta a { padding: 18px 40px; font-size: 1.35rem; min-width: 280px; }
-        }
-
-        /* Telas médias (tablets pequenos) */
-        @media (min-width: 480px) {
             body { font-size: 19px; }
-            h1 { font-size: 2.4rem; }
-            .container { padding: 35px 25px; width: 88%; }
-            .logo img { max-width: 260px; }
-            .cta a { padding: 22px 55px; font-size: 1.55rem; min-width: 340px; }
+            h1 { font-size: 2.1rem; }
+            p { font-size: 1.15rem; }
+            .logo img { max-width: 210px; }
+            .cta a { padding: 20px 45px; min-width: 300px; font-size: 1.45rem; }
         }
 
-        /* Desktop */
+        /* Telas maiores */
+        @media (min-width: 480px) {
+            body { font-size: 21px; }
+            h1 { font-size: 2.6rem; }
+            .container { padding: 35px 25px; width: 90%; }
+            .cta a { padding: 24px 60px; min-width: 360px; }
+        }
+
         @media (min-width: 768px) {
-            .container { max-width: 760px; padding: 45px 35px; }
-            h1 { font-size: 2.8rem; }
-            .logo img { max-width: 300px; }
+            .container { max-width: 780px; padding: 50px 40px; }
+            h1 { font-size: 3rem; }
+            .logo img { max-width: 320px; }
         }
     </style>
 </head>
